@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slideInLeft {
+  0% {
+      left: -100%;
+      opacity: 0;
+  }
+  100% {
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+  }
+}
+
+
+@keyframes slideInRight {
+  0% {
+      right: -100%;
+      opacity: 0;
+  }
+  100% {
+      right: 50%;
+      transform: translateX(50%);
+      opacity: 1;
+  }
+}

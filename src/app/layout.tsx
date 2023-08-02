@@ -1,3 +1,5 @@
+import Footer from './components/Footer/Footer'
+import Nav from './components/nav/Nav'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -13,7 +15,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-zinc-900">{children}</body>
+      <body className="bg-zinc-900">
+        <aside>
+          <Nav />
+        </aside>
+        {children}
+        <footer>
+          <Footer />
+        </footer>
+      </body>
     </html>
   )
 }

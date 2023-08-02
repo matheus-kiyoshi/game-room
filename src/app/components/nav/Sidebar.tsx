@@ -2,6 +2,7 @@ import { twMerge } from 'tailwind-merge'
 import Logo from './Logo'
 import SidebarItem from './SidebarItem'
 import GitHubIcon from './GitHubIcon'
+import Link from 'next/link'
 
 export default function Sidebar({
   isOpen,
@@ -19,18 +20,22 @@ export default function Sidebar({
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <Logo isOpen={isOpen} />
+      <Link href="/">
+        <Logo isOpen={isOpen} />
+      </Link>
       <div className="w-full flex flex-col flex-grow justify-between">
         <div>
+          <Link href="/TicTacToe">
+            <SidebarItem
+              classname="hover:bg-gradient-to-l"
+              isOpen={isOpen}
+              text="Tic-Tac-Toe"
+            />
+          </Link>
           <SidebarItem
             classname="hover:bg-gradient-to-l"
             isOpen={isOpen}
-            text="Minigame 1"
-          />
-          <SidebarItem
-            classname="hover:bg-gradient-to-l"
-            isOpen={isOpen}
-            text="Minigame 2"
+            text="Ping-Pong"
           />
           <SidebarItem
             classname="hover:bg-gradient-to-l"
