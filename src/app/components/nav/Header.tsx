@@ -4,6 +4,7 @@ import Logo from './Logo'
 import { useScrollDown } from './hooks/useScrollDown'
 import GitHubIcon from './GitHubIcon'
 import SidebarItem from './SidebarItem'
+import Link from 'next/link'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +17,9 @@ export default function Header() {
       }`}
     >
       <div className="h-40 flex justify-between items-center px-2">
-        <Logo isOpen={true} classname="justify-start" />
+        <Link href="/">
+          <Logo isOpen={true} classname="justify-start" />
+        </Link>
         <HamburgerMenuButton open={isOpen} setOpen={setIsOpen} />
       </div>
       <div
@@ -27,11 +30,18 @@ export default function Header() {
         {isOpen && (
           <div className="w-full flex flex-col flex-grow justify-between h-screen">
             <div>
-              <SidebarItem isOpen={isOpen} text="Minigame 1" />
-              <SidebarItem isOpen={isOpen} text="Minigame 2" />
-              <SidebarItem isOpen={isOpen} text="Minigame 3" />
-              <SidebarItem isOpen={isOpen} text="Minigame 4" />
-              <SidebarItem isOpen={isOpen} text="Minigame 5" />
+              <Link href="/TicTacToe">
+                <SidebarItem isOpen={isOpen} text="Tic-Tac-Toe" />
+              </Link>
+              <Link href="/PacMan">
+                <SidebarItem isOpen={isOpen} text="PacMan" />
+              </Link>
+              <Link href="/MortalKombat">
+                <SidebarItem isOpen={isOpen} text="Mortal Kombat" />
+              </Link>
+              <Link href="/2048">
+                <SidebarItem isOpen={isOpen} text="2048" />
+              </Link>
             </div>
             <GitHubIcon />
           </div>

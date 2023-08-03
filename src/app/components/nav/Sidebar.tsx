@@ -32,26 +32,27 @@ export default function Sidebar({
               text="Tic-Tac-Toe"
             />
           </Link>
-          <SidebarItem
-            classname="hover:bg-gradient-to-l"
-            isOpen={isOpen}
-            text="Ping-Pong"
-          />
-          <SidebarItem
-            classname="hover:bg-gradient-to-l"
-            isOpen={isOpen}
-            text="Minigame 3"
-          />
-          <SidebarItem
-            classname="hover:bg-gradient-to-l"
-            isOpen={isOpen}
-            text="Minigame 4"
-          />
-          <SidebarItem
-            classname="hover:bg-gradient-to-l"
-            isOpen={isOpen}
-            text="Minigame 5"
-          />
+          <Link href="/PacMan">
+            <SidebarItem
+              classname="hover:bg-gradient-to-l"
+              isOpen={isOpen}
+              text="PacMan"
+            />
+          </Link>
+          <Link href="/MortalKombat">
+            <SidebarItem
+              classname="hover:bg-gradient-to-l"
+              isOpen={isOpen}
+              text="Mortal Kombat"
+            />
+          </Link>
+          <Link href="/2048">
+            <SidebarItem
+              classname="hover:bg-gradient-to-l"
+              isOpen={isOpen}
+              text="2048"
+            />
+          </Link>
         </div>
         <GitHubIcon />
       </div>
